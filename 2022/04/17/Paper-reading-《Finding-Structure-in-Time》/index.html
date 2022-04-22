@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Paper-reading | 《Finding Structure in Time》 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文章名：《Finding Structure in Time》 发表信息：1990年，Cognitive science. 作者：Jeffrey L. Elman(Jeffrey Locke Elman). University of California, San Diego. Wikipedia scholar.google 论文内容  &amp;laquo Finding Structure in">
+  <meta name="description" content="文章名：《Finding Structure in Time》 发表信息：1990年，Cognitive science. 作者：Jeffrey L. Elman(Jeffrey Locke Elman). University of California, San Diego. Wikipedia &amp;&amp; scholar.google 论文内容  &amp;laquo Finding St">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Paper-reading | 《Finding Structure in Time》">
 <meta property="og:url" content="http://example.com/2022/04/17/Paper-reading-%E3%80%8AFinding-Structure-in-Time%E3%80%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="文章名：《Finding Structure in Time》 发表信息：1990年，Cognitive science. 作者：Jeffrey L. Elman(Jeffrey Locke Elman). University of California, San Diego. Wikipedia scholar.google 论文内容  &amp;laquo Finding Structure in">
+<meta property="og:description" content="文章名：《Finding Structure in Time》 发表信息：1990年，Cognitive science. 作者：Jeffrey L. Elman(Jeffrey Locke Elman). University of California, San Diego. Wikipedia &amp;&amp; scholar.google 论文内容  &amp;laquo Finding St">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-17T08:42:32.000Z">
-<meta property="article:modified_time" content="2022-04-18T13:05:18.581Z">
+<meta property="article:modified_time" content="2022-04-22T03:47:43.400Z">
 <meta property="article:author" content="Ella Collins">
 <meta property="article:tag" content="Learn, Paper">
 <meta name="twitter:card" content="summary">
@@ -197,17 +197,127 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>文章名：《Finding Structure in Time》</p>
+        <p>文章名：<a target="_blank" rel="noopener" href="https://crl.ucsd.edu/~elman/Papers/fsit.pdf">《Finding Structure in Time》</a></p>
 <p>发表信息：1990年，Cognitive science.</p>
-<p>作者：Jeffrey L. Elman(Jeffrey Locke Elman). University of California, San Diego. <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Jeffrey_Elman">Wikipedia</a> <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=Cxi26JcAAAAJ&hl=zh-CN">scholar.google</a></p>
+<p>作者：Jeffrey L. Elman(Jeffrey Locke Elman). University of California, San Diego. <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Jeffrey_Elman">Wikipedia</a> &amp;&amp; <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=Cxi26JcAAAAJ&hl=zh-CN">scholar.google</a></p>
 <h1 id="论文内容"><a href="#论文内容" class="headerlink" title="论文内容"></a>论文内容</h1><center>  &laquo Finding Structure in Time &raquo </center> 
+，。
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">L(Y,f(x))&#x3D;</span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">1, Y!&#x3D;f(x) \\</span><br><span class="line">0, Y &#x3D; f(x)</span><br><span class="line">\end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.Introduction</span><br><span class="line">2.The Problem with Time</span><br><span class="line">3.Networks with Memory</span><br><span class="line">4.Exclusive-Or</span><br><span class="line">5.Structure in Letter Sequences</span><br><span class="line">6.Discovering the Notion &quot;Word&quot;</span><br><span class="line">7.Discovering Lexical Classes From Word Order</span><br><span class="line">8.Types, Tokens, And Structured Representations</span><br><span class="line">9.Conclusions</span><br></pre></td></tr></table></figure>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>人类的很多行为隐含时间，因此时间的分析很重要。不同于用spatial representation时序的方式，用时间对流程的影响来隐式的表示时间。1986年Jordan用recurrent links给网络提供了动态记忆。在这篇文章的方法中，hidden unit patterns反馈来达到任务对prior internal states的需要。随后用一些例子进行了验证。</p>
+<!-- <font color=#2196F3 size=2 face="宋体">宋体大小为2的字</font> -->
+<!-- <font color=#2196F3>content</font> -->
 
+<h2 id="1-Introducton"><a href="#1-Introducton" class="headerlink" title="1.Introducton"></a>1.Introducton</h2><ul>
+<li>Para 1 : <font color=#2196F3>Time对于cognition很重要。</font>开头背景介绍，出了说明time对于cognition的重要，诸如语言等。如果没有时间表示，很难知道如何去处理一些基本问题。</li>
+<li>Para 2 : <font color=#2196F3>强调人类很多与时间有关的基本活动往往会忽略时间，这是有问题的。</font>时间的表示是在parallel-processing models中处理serial nature  of temporal events被提出的。即使在serial frameworks中，serial的输入和输出与更高级的表示的交互也存在问题。例如，motor activity。在Linguistic theoreticians中用syntactic tree表示，不关心temporal aspects。由此可见，时间的表示很重要，但是有时被忽略了。</li>
+<li>Para 3 : <font color=#2196F3>过渡段，引出本文方法的核心观点。</font>在parallel distributed processing models中，通过spatial representation 来并行时间。然而这种方式不是一种好的表示方式，因此，文章通过时间在处理过程中的影响来表示，而不是通过an additional dimension of the input。</li>
+<li>Para 4 : <font color=#2196F3>总结文章以及评价了文章的方法。</font> The approach taken is rather simple, but the results are sometimes complex and unexpected. 并且，这种表示时间的方法可以和connectionist representation交互。</li>
+<li>Para 5 : <font color=#2196F3>简单介绍后面章节内容。</font> 大致可以分为，现存方法的问题；本文的方法；应用实例。  <h2 id="2-The-Problem-with-Time"><a href="#2-The-Problem-with-Time" class="headerlink" title="2.The Problem with Time"></a>2.The Problem with Time</h2></li>
+<li>Para 1 : <font color=#2196F3>介绍现有的表示时间的方法。</font>显示表示时间的方法。第一个temporal event表示为pattern vecotr的first element，依此类推。整个pattern vector被整个模型parallel处理。</li>
+<li>Para 2 ：<font color=#2196F3>表明spatial metaphor for time的方式有一些缺点。</font>以此来突出文章的工作的重要性。第一个缺点，需要和真实世界有一些接口，比如buffers来缓冲输入使得他们可以一次呈现。但是还是有一个逻辑问题，系统怎么知道什么时候检查buffer?</li>
+<li>Para 3 : <font color=#2196F3>第二个缺点。</font> shift register对模式的持续时间强加了严格的限制，此外它建议所有的输入的长度相同。这对于诸如语言等不定长问题处理起来非常麻烦。 </li>
+<li>Para 4 : <font color=#2196F3>第三个缺点。</font>最严重的问题，这种方法不能从绝对时间顺序区分出相对时间顺序。</li>
+<li>Para 5 : <font color=#2196F3>过渡段，引出后面的内容。</font>大家想要的是更加richer没有这些问题的一种对时间的表示。随后提出了一种简单但是有良好表现效果的模型。<h2 id="3-Network-with-Memory"><a href="#3-Network-with-Memory" class="headerlink" title="3.Network with Memory"></a>3.Network with Memory</h2></li>
+<li>Para 1 :<font color=#2196F3>文章的方法和现有的方法的对比。</font>spatical representation的方法显示表示时间最为一个输入。文章用时间对处理过程的影响表示时间，给网络了记忆。</li>
+<li>Para 2 :<font color=#2196F3>目前基于时间对处理过程的影响表示时间的研究。</font>特别是1986年的Jordan的工作，recurrent connections让网络的 hidden units看到之前的输出。</li>
+<li>Para 3 :<font color=#2196F3>简述了对Jordon方案的修改。</font>Context Units在input level进行增强。</li>
+<li>Para 4 :<font color=#2196F3>详细描述了文章工作的一个feed forward。</font>input units和context units激活hidden units,hidden units激活output units的同时feed back给context units。</li>
+<li>Para 5 : <font color=#2196F3>对本文提出的机制的分析。</font>由于hidden units被保存为了context,hidden units必须在完成映射的同时探索表示序列时间属性的有用编码。这是一种internal representation of time。</li>
+<li>Para 6 : <font color=#2196F3>过渡段，引出后面的内容。</font>将这种结构应用于一些列序列的输入。</li>
+</ul>
+<h2 id="4-Exclusive-Or"><a href="#4-Exclusive-Or" class="headerlink" title="4.Exclusive-Or"></a>4.Exclusive-Or</h2><ul>
+<li>Para 1 :<font color=#2196F3>介绍基本的XOR问题。</font>XOR不能被简单的2层网络学习，至少需要3层网络。由2-bit输入产生1-bit的输出。</li>
+<li>Para 2 :<font color=#2196F3>XOR转换成temporal domain的问题。</font>每两个连续的输入产生一个输出。</li>
+<li>Para 3 :<font color=#2196F3>介绍文章时序XOR的输入、输出和网络结构。</font>网络结构是1 input unit、2 hidden units、1 output unit、以及2 context units。一共是3000bits的输入数据，任务是预测下一个时刻的输入。</li>
+<li>Para 4 :<font color=#2196F3>解释隐藏层的输入。</font>hidden unit的输入由input和上一个时刻的hidden unit组成。因此预测包含了真实输入和网络上一个时刻的状态。</li>
+<li>Para 5 :<font color=#2196F3>时序XOR的进一步解释。</font>只能正确预测某些时刻的输入，进一步解释，只能正确预测3的倍数位置的XOR结果的输入。其他位置的序列比较随机，50%的概率。</li>
+<li>Para 6 :<font color=#2196F3>用RMS误差解释输出结果。</font>在某些位置误差小（3的倍数的位置）其他位置误差大，这是因为网络试图在所有位置用XOR预测结果，观察网络的output就可以发现。</li>
+<li>Para 7 :<font color=#2196F3>分析网络被激活的单元。</font>2个hidden unit,连续相同输入时一个hidden unit被激活，输入不断变化时另一个被激活。问题被投入temporal的网络的时候，形式可能有所变化。</li>
+<li>Para 8 :<font color=#2196F3>分析任务。</font>时序XOR任务与auto-association类似，来发现内部结构。网络必须把patterns转换成compact representations,这通过exploit redundancies来实现。</li>
+<li>Para 9 :<font color=#2196F3>总结使用XOR例子的原因。</font>目标是找到 XOR 的时间结构顺序。简单的自动关联是行不通的，因为简单的任务在所有时间点重现输入是很容易解决的，并且不需要对顺序模式敏感。 预测任务很有用，因为<br>它的解决方案要求网络对时间结构敏感。这是使用预测来做XOR的原因。<h2 id="5-Structure-in-Letter-Sequences"><a href="#5-Structure-in-Letter-Sequences" class="headerlink" title="5.Structure in Letter Sequences"></a>5.Structure in Letter Sequences</h2></li>
+<li>Para 1 :<font color=#2196F3>过渡段，引出下一个例子。</font>XOR的例子太简单，只需要记忆一个时刻的1-bit，只有4种情况。更复杂的输入需要可能大于temporal extent，也可能pattern的长度可变。</li>
+<li>Para 2 :<font color=#2196F3>介绍第二个例子的输入。</font>用字母模拟speech sounds，用6-bit binary vector代表speech。6个bit分别是[Consonant, Vowel, Interrupted, High, Back, Voiced]。</li>
+<li>Para 3 :<font color=#2196F3>介绍输入sequence的步骤。</font>第一步，用(b,d,g)随机产生一个1,000-letter sequence，然后替换每个字母，由此生成一个semi-random的句子。</li>
+<li>Para 4 :<font color=#2196F3>介绍网络大小结构。</font>6 input units, 20 hidden units, 6 output  units, 20 context units。</li>
+<li>Para 5 :<font color=#2196F3>介绍训练数据和测试数据。</font>sequence是循环的训练200passes through the sequence。测试的时候用同样的规则生成数据。</li>
+<li>Para 6 :<font color=#2196F3>描述实验结果。</font>在元音时误差小，辅音时误差大。</li>
+<li>Para 7 :<font color=#2196F3>对结果进行简单分析。</font>可以正确预测元音的内容和个数,不能正确预测辅音。</li>
+<li>Para 8 :<font color=#2196F3>描述不同的预测方式。</font>前面的结果是在所有6-bit上计算误差,可以在单个bit上单独计算误差。</li>
+<li>Para 9 :<font color=#2196F3>单bit分析误差的结果分析。</font>网络可以准确的预测vowels的个数和内容，虽然不能预测consonant，但是可以预测这个bit是consonant，因此<em>Consonant</em>比<em>High</em>的误差小。</li>
+<li>Para 10 :<font color=#2196F3>总结第二个例子。</font>和XOR的例子相比，输入更多，预测长度可变,但是输入仍然是structured。</li>
+</ul>
+<h2 id="6-Discovering-the-Notion-“Word”"><a href="#6-Discovering-the-Notion-“Word”" class="headerlink" title="6.Discovering the Notion “Word”"></a>6.Discovering the Notion “Word”</h2><ul>
+<li>Para 1 :<font color=#2196F3>引出第三个例子。</font>语言的因素包括sounds和morpheme,被抽象为noun,verb,或者phrase,这些notion被假设为是innate。</li>
+<li>Para 2 :<font color=#2196F3>描述”phoneme”,”morpheme”对于语言的意义。</font>一段关于linguist和psycholinguist对于语言组成的分析。不同地方对于语言组成的方法也不同。</li>
+<li>Para 3 :<font color=#2196F3>对于语言分析的结论。</font>语言的分析have a fluidity，并且，关于语言的组成的观念仍然是一个open and important question。</li>
+<li>Para 4 :<font color=#2196F3>单词概念的意义讨论。</font>“word”的概念是否作为学习连续出现顺序字符的结果而出现。</li>
+<li>Para 5 :<font color=#2196F3>简述这个例子输入数据的组成。</font>这个例子是上一个例子的另外一个版本，输入由多个连续的字母组成，这些例子来自真实世界，word之间没有间隔，sentence之间没有间隔。</li>
+<li>Para 6 :<font color=#2196F3>输入数据的描述。</font>15个words的字典，产生200个有4-9个words的不同长度的sentences，拼接起来，1,270个words，4,963letters的输入。</li>
+<li>Para 7 :<font color=#2196F3>输入数据的描述。</font>输入时4,963的letters，每个字母5-bit。</li>
+<li>Para 8 :<font color=#2196F3>网络结构描述。</font>5 input units, 20 hidden units, 5 output units，20 context units。句子足够随机，如果没有记住整个序列，不可能获得很小的误差。</li>
+<li>Para 9 :<font color=#2196F3>对结果的简单描述。</font>在每个新出现的word上错误率很高，当word多出现几次后，错误率降低。</li>
+<li>Para 10 :<font color=#2196F3>对结果的进一步分析。</font>当sequences循环的时候，error为分析提供了一个很好的线索，error是统计数据，是分级的。边界标准是相对的，可能会把多个word视为一个word,只是可能出现在学习语言早期的孩子身上的。</li>
+<li>Para 11 :<font color=#2196F3>总结这个例子。</font>这个例子不应该作为一个获取word的模型，这个模型只是作为语言学习者学习的一个有限部分。它展示了一个simple recurrent networks提取信息的能力。</li>
+</ul>
+<h2 id="7-Discovering-Lexical-Classes-From-Word-Order"><a href="#7-Discovering-Lexical-Classes-From-Word-Order" class="headerlink" title="7.Discovering Lexical Classes From Word Order"></a>7.Discovering Lexical Classes From Word Order</h2><ul>
+<li>Para 1 :<font color=#2196F3>引出下一个例子。</font>句子中的单词不是简单的线性顺序，而是一种非常复杂抽象的顺序。</li>
+<li>Para 2 :<font color=#2196F3>解释这个例子的意义。</font>surface order和word order的关系，surface order是唯一可见的，但是它不能表示真正的word order。</li>
+<li>Para 3 :<font color=#2196F3>进一步解释这个例子的意义。</font>用一个网络来学习语言种单词顺序的底层抽象顺序。</li>
+<li>Para 4 :<font color=#2196F3>描述构建输入的第一步。</font>用13个（只列出了12个）nouns和verb类的29个lexical item生成2-word和3-word的句子。</li>
+<li>Para 5 :<font color=#2196F3>输入数据描述。</font>用15个句子模板生成10,000个随机的2-/3-word sentence。拼接在一起，每个word用31-bit vector表示，最终是27,534 31-bit vectors。任务还是预测下一个单词。</li>
+<li>Para 6 :<font color=#2196F3>描述网络大小。</font>input layer和output layer是31 nodes，hidden unit 和context layers 是150 nodes。</li>
+<li>Para 7 :<font color=#2196F3>描述training strategy。</font>27,354 31-bit vectors组成输入向量。每次输入一个word，预测下一个输入，循环输入6轮。</li>
+<li>Para 8 :<font color=#2196F3>描述结果。</font>RMS error来统计误差。</li>
+<li>Para 9 :<font color=#2196F3>分析结果。</font>预测任务是不确定的，不能绝对准确的预测，不可避免地存在built-in error。尽管预测不能达到error-free，但是word order不是随机的。网络期待学习的是successor words的出现频率，然后按照频率激活输入结点。</li>
+<li>Para 10 :<font color=#2196F3>修改测量error的方式。</font>因为可能的successor word是一个集合，因此，不用RMS的方式衡量误差，使用每个word出现的概率（类似于cross entropy）。</li>
+<li>Para 11 :<font color=#2196F3>对网络性能的评估。</font>这里提到了consine来测量。</li>
+<li>Para 12 :<font color=#2196F3>对任务的评价。</font>怎样实现在输入没有类型划分的情况下，来进行预测。</li>
+<li>Para 13 :<font color=#2196F3>网络机制的分析。</font>internal representations被网络的hidden unit捕获。</li>
+<li>Para 14 :<font color=#2196F3>对网络对于词分类的内部机制进行分析。</font>在所有数据上训练6轮，然后输入数据，不记录结果，然后记录每个word被激活时的hidden unit和context，相同word不同出现位置取平均值，然后再这些内部表示上使用hierarchical clustering analysis，相似的word在同一个tree上。</li>
+<li>Para 15 :<font color=#2196F3>内部状态层次聚类结果分析。</font>基本分为nouns和verbs两大类，具体可以分为更多的小类。</li>
+<li>Para 16 :<font color=#2196F3>内部状态聚类结果分析。</font>网络不仅能预测word的顺序，并且识别出每一个word的类别，对类别的划分十分detailed。</li>
+<li>Para 17 :<font color=#2196F3>总结聚类结果的第一点。</font>通过spatical relations来聚类，结果是有层次的。越高级的分类结果，越是对应一般化的空间。</li>
+<li>Para 18 :<font color=#2196F3>第二点。</font>层次是“soft” and implicit. 有些类可以定性区分，有些类边界则比较模糊。</li>
+<li>Para 19 :<font color=#2196F3>第三点。</font>网络不知道类别内容。网络没有可用的信息可以“奠定”现实世界中的结构信息。</li>
+<li>Para 20 :<font color=#2196F3>总结例子。</font>在这个例子种，上下文是意义的一个重要组成部分。</li>
+<li>Para 21 :<font color=#2196F3>新实验的实现方式。</font>用网络没有见过的“zog”代替句子中的“man”。 向网络展示一次，保存hidden unit,使用和训练数据相同的层次聚类。</li>
+<li>Para 22 :<font color=#2196F3>实验结果。</font>“zog”的聚类结果和“man”类似。一种解释方式是，网络期待“man”或者与“man”类似的单词出现，这就好像语言学习者利用word order的顺序智能的猜测没有见过的word的意思一样。</li>
+<li>Para 23 :<font color=#2196F3>总结这个例子。</font>上下文有助于确定词汇，尽管不能准确的预测下一个单词，但是可以近似准确的预测下一个单词的类别。<h2 id="8-Types-Tokens-And-Structured-Representations"><a href="#8-Types-Tokens-And-Structured-Representations" class="headerlink" title="8.Types, Tokens And Structured Representations"></a>8.Types, Tokens And Structured Representations</h2></li>
+<li>Para 1 :<font color=#2196F3>PDP network和traditional computational model的对比。</font>traditional model涉及symbolic representations而PDP network似乎不涉及。</li>
+<li>Para 2 :<font color=#2196F3>进一步对比PDP network和traditional model。</font>traditional model和PDP网络都涉及表示象征性的特定意义上的表征指的是其他事物。在PDP网络中，内部表示通常是跨越一组隐藏单元的激活模式。经典符号通常指类或类别，但在PDP网络中，表示可能高度依赖上下文。 这并不意味着陈述不要捕获有关类别或类的信息。</li>
+<li>Para 3 :<font color=#2196F3>PDP network存在的问题。</font>可能产生一个实体的多个表示。</li>
+<li>Para 4 :<font color=#2196F3>证明上一段的观点。</font>概念表示为隐藏结点的激活模式。</li>
+<li>Para 5 :<font color=#2196F3>分析PDP优点。</font>理论上analog hidden units可以提供无限的记忆能力。</li>
+<li>Para 6 :<font color=#2196F3>解释在实践中网络的记忆是有限的原因。</font>理论上记忆是无限的，但是在实践中记忆却是有限的。作者分析了三点原因，第一，机器的numeric precision是有限的；第二，激活函数的重复使用使得结果exponential decay；第三，训练方法不是探索网络最优容量的方法。</li>
+<li>Para 7 :<font color=#2196F3>网络性能分析。</font>在网络学习了预测下一个word的任务之后，网络学习到的表示反应了word’s meaning和grammatical category。</li>
+<li>Para 8 :<font color=#2196F3>对context的敏感程度。</font>事实上，对context不敏感。</li>
+<li>Para 9 :<font color=#2196F3>上一段使用mean vector分析的原因。</font>27,454个pattern的层次聚类结果难以展示。27,454个pattern聚类的数量结果指示结果会向所有word使用mean vector再聚类的结果收敛。</li>
+<li>Para 10 :<font color=#2196F3>聚类结果分析。</font>即使相同的word，在不同的context中表示结果也有差异。</li>
+<li>Para 11 :<font color=#2196F3>相同word的聚类描述。</font>对”boy”和”girl”再聚类。</li>
+<li>Para 12 :<font color=#2196F3>相同word聚类结果分析。</font>即使是相同的word，划分也有子结构，word在句首的一类，句中一类，句末一类。</li>
+<li>Para 13 :<font color=#2196F3>总结分析结果。</font>使用几何图形分析结果很有用。不同类型的word激活internal representation的不同空间。相同word的token也有偏差。</li>
+<li>Para 14 :<font color=#2196F3>总结分析结果。</font>不同于symbolic systems的indexing和binging的方式，这种网络可以同时完成type &amp; token的辨别。</li>
+</ul>
+<h2 id="9-Conclusions"><a href="#9-Conclusions" class="headerlink" title="9.Conclusions"></a>9.Conclusions</h2><ul>
+<li>Para 1 :<font color=#2196F3>简短说明文章的意义和内容。</font>时间对于分析人类行为很重要。文章隐式的表示网络中的时间。</li>
+<li>Para 2 :<font color=#2196F3>强调重点。</font>评价网络是a simple architecture, but is surprisingly powerful.<ul>
+<li>当表示成时序事件的时候，一些问题的表示方式会变化。如XOR。</li>
+<li>error的变化分析可以用来分析时间结构。</li>
+<li>当结果差的时候增加句子的依赖是不必要的。</li>
+<li>time和memory的表示依赖任务。</li>
+<li>表示不需要被flat, atomistic, unstructured。</li>
+</ul>
+</li>
+<li>Para 3 :<font color=#2196F3>总结文章的工作。</font>preliminary in nature。</li>
+<li>Para 4 :<font color=#2196F3>关于网络的memory。</font>文章的工作用的是有限的状态，需要更多系统性的分析。</li>
+<li>Para 5 :<font color=#2196F3>PDP模型的作用。</font>PDP方法可以用来发现关于时间的结构和表示方面的工作。</li>
+</ul>
+<h1 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h1><p><strong>如有理解不到位的地方欢迎批评指正</strong></p>
+<p>文章30+页，看着挺多，但是介绍网络的内容不多，大部分是实验证明。实验设计的思路很好，一步步递进。我理解是四个实验，倒数第二段是对网络在文本上的表现的分析。</p>
+<p>Recurrent network是在1986年Jordan network上改进的，两者的思路很相似，都是给hidden unit加上上一个时刻的信息。不同的是，Jordan network是记录上一个时刻的输出，而Recurrent network是记录的上一个时刻的hidden unit的状态，这样的话，对外的表现上recurrent network的变化是对外看不到的，这种网络结构称为Elman RNN。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>PyTorch 1.11.0版本的<a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.RNN.html?highlight=rnn#torch.nn.RNN">Elman RNN</a> </p>
 
-
-
-<h1 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h1>
       
 
       
@@ -319,7 +429,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E5%86%85%E5%AE%B9"><span class="toc-number">1.</span> <span class="toc-text">论文内容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E6%96%B0%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">创新点</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E5%86%85%E5%AE%B9"><span class="toc-number">1.</span> <span class="toc-text">论文内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">1.1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introducton"><span class="toc-number">1.2.</span> <span class="toc-text">1.Introducton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-The-Problem-with-Time"><span class="toc-number">1.3.</span> <span class="toc-text">2.The Problem with Time</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Network-with-Memory"><span class="toc-number">1.4.</span> <span class="toc-text">3.Network with Memory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Exclusive-Or"><span class="toc-number">1.5.</span> <span class="toc-text">4.Exclusive-Or</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Structure-in-Letter-Sequences"><span class="toc-number">1.6.</span> <span class="toc-text">5.Structure in Letter Sequences</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Discovering-the-Notion-%E2%80%9CWord%E2%80%9D"><span class="toc-number">1.7.</span> <span class="toc-text">6.Discovering the Notion “Word”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Discovering-Lexical-Classes-From-Word-Order"><span class="toc-number">1.8.</span> <span class="toc-text">7.Discovering Lexical Classes From Word Order</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Types-Tokens-And-Structured-Representations"><span class="toc-number">1.9.</span> <span class="toc-text">8.Types, Tokens And Structured Representations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Conclusions"><span class="toc-number">1.10.</span> <span class="toc-text">9.Conclusions</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E6%96%B0%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">创新点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.1.</span> <span class="toc-text">实现</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -442,7 +552,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Learn, Paper</a>
+                <a href="javascript:void(0)" class="js-tag color5">Life</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Like</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -450,11 +564,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Life</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Like</a>
+                <a href="javascript:void(0)" class="js-tag color3">Learn, Paper</a>
               </li>
             
             <div class="clearfix"></div>
