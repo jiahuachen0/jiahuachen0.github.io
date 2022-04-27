@@ -187,11 +187,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>文章名：<a target="_blank" rel="noopener" href="https://crl.ucsd.edu/~elman/Papers/fsit.pdf">《Finding Structure in Time》</a></p>
-<p>发表信息：1990年，Cognitive science.</p>
+<p>发表信息：1990年，Cognitive Science.</p>
 <p>作者：Jeffrey L. Elman(Jeffrey Locke Elman). University of California, San Diego. <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Jeffrey_Elman">Wikipedia</a> &amp;&amp; <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=Cxi26JcAAAAJ&hl=zh-CN">scholar.google</a></p>
 <h1 id="论文内容"><a href="#论文内容" class="headerlink" title="论文内容"></a>论文内容</h1><center>  &laquo Finding Structure in Time &raquo </center> 
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.Introduction</span><br><span class="line">2.The Problem with Time</span><br><span class="line">3.Networks with Memory</span><br><span class="line">4.Exclusive-Or</span><br><span class="line">5.Structure in Letter Sequences</span><br><span class="line">6.Discovering the Notion &quot;Word&quot;</span><br><span class="line">7.Discovering Lexical Classes From Word Order</span><br><span class="line">8.Types, Tokens, And Structured Representations</span><br><span class="line">9.Conclusions</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Introduction</span><br><span class="line">The Problem with Time</span><br><span class="line">Networks with Memory</span><br><span class="line">Exclusive-Or</span><br><span class="line">Structure in Letter Sequences</span><br><span class="line">Discovering the Notion &quot;Word&quot;</span><br><span class="line">Discovering Lexical Classes From Word Order</span><br><span class="line">Types, Tokens, And Structured Representations</span><br><span class="line">Conclusions</span><br></pre></td></tr></table></figure>
 <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>人类的很多行为隐含时间，因此时间的分析很重要。不同于用spatial representation时序的方式，用时间对流程的影响来隐式的表示时间。1986年Jordan用recurrent links给网络提供了动态记忆。在这篇文章的方法中，hidden unit patterns反馈来达到任务对prior internal states的需要。随后用一些例子进行了验证。</p>
 <!-- <font color=#2196F3 size=2 face="宋体">宋体大小为2的字</font> -->
 <!-- <font color=#2196F3>content</font> -->
@@ -214,7 +214,8 @@
 <li>Para 5 : <font color=#2196F3>对本文提出的机制的分析。</font>由于hidden units被保存为了context,hidden units必须在完成映射的同时探索表示序列时间属性的有用编码。这是一种internal representation of time。</li>
 <li>Para 6 : <font color=#2196F3>过渡段，引出后面的内容。</font>将这种结构应用于一些列序列的输入。</li>
 </ul>
-<h2 id="4-Exclusive-Or"><a href="#4-Exclusive-Or" class="headerlink" title="4.Exclusive-Or"></a>4.Exclusive-Or</h2><ul>
+<h2 id="4-Exclusive-Or"><a href="#4-Exclusive-Or" class="headerlink" title="4.Exclusive-Or"></a>4.Exclusive-Or</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LLwxwd"><img src="https://s1.ax1x.com/2022/04/27/LLwxwd.png" alt="LLwxwd.png"></a></p>
+<ul>
 <li>Para 1 :<font color=#2196F3>介绍基本的XOR问题。</font>XOR不能被简单的2层网络学习，至少需要3层网络。由2-bit输入产生1-bit的输出。</li>
 <li>Para 2 :<font color=#2196F3>XOR转换成temporal domain的问题。</font>每两个连续的输入产生一个输出。</li>
 <li>Para 3 :<font color=#2196F3>介绍文章时序XOR的输入、输出和网络结构。</font>网络结构是1 input unit、2 hidden units、1 output unit、以及2 context units。一共是3000bits的输入数据，任务是预测下一个时刻的输入。</li>
