@@ -196,7 +196,7 @@
 <!-- <font color=#2196F3 size=2 face="宋体">宋体大小为2的字</font> -->
 <!-- <font color=#2196F3>content</font> -->
 
-<h2 id="1-Introducton"><a href="#1-Introducton" class="headerlink" title="1.Introducton"></a>1.Introducton</h2><ul>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1.Introduction"></a>1.Introduction</h2><ul>
 <li>Para 1 : <font color=#2196F3>Time对于cognition很重要。</font>开头背景介绍，出了说明time对于cognition的重要，诸如语言等。如果没有时间表示，很难知道如何去处理一些基本问题。</li>
 <li>Para 2 : <font color=#2196F3>强调人类很多与时间有关的基本活动往往会忽略时间，这是有问题的。</font>时间的表示是在parallel-processing models中处理serial nature  of temporal events被提出的。即使在serial frameworks中，serial的输入和输出与更高级的表示的交互也存在问题。例如，motor activity。在Linguistic theoreticians中用syntactic tree表示，不关心temporal aspects。由此可见，时间的表示很重要，但是有时被忽略了。</li>
 <li>Para 3 : <font color=#2196F3>过渡段，引出本文方法的核心观点。</font>在parallel distributed processing models中，通过spatial representation 来并行时间。然而这种方式不是一种好的表示方式，因此，文章通过时间在处理过程中的影响来表示，而不是通过an additional dimension of the input。</li>
@@ -224,7 +224,9 @@
 <li>Para 6 :<font color=#2196F3>用RMS误差解释输出结果。</font>在某些位置误差小（3的倍数的位置）其他位置误差大，这是因为网络试图在所有位置用XOR预测结果，观察网络的output就可以发现。</li>
 <li>Para 7 :<font color=#2196F3>分析网络被激活的单元。</font>2个hidden unit,连续相同输入时一个hidden unit被激活，输入不断变化时另一个被激活。问题被投入temporal的网络的时候，形式可能有所变化。</li>
 <li>Para 8 :<font color=#2196F3>分析任务。</font>时序XOR任务与auto-association类似，来发现内部结构。网络必须把patterns转换成compact representations,这通过exploit redundancies来实现。</li>
-<li>Para 9 :<font color=#2196F3>总结使用XOR例子的原因。</font>目标是找到 XOR 的时间结构顺序。简单的自动关联是行不通的，因为简单的任务在所有时间点重现输入是很容易解决的，并且不需要对顺序模式敏感。 预测任务很有用，因为<br>它的解决方案要求网络对时间结构敏感。这是使用预测来做XOR的原因。<h2 id="5-Structure-in-Letter-Sequences"><a href="#5-Structure-in-Letter-Sequences" class="headerlink" title="5.Structure in Letter Sequences"></a>5.Structure in Letter Sequences</h2></li>
+<li>Para 9 :<font color=#2196F3>总结使用XOR例子的原因。</font>目标是找到 XOR 的时间结构顺序。简单的自动关联是行不通的，因为简单的任务在所有时间点重现输入是很容易解决的，并且不需要对顺序模式敏感。 预测任务很有用，因为它的解决方案要求网络对时间结构敏感。这是使用预测来做XOR的原因。</li>
+</ul>
+<h2 id="5-Structure-in-Letter-Sequences"><a href="#5-Structure-in-Letter-Sequences" class="headerlink" title="5.Structure in Letter Sequences"></a>5.Structure in Letter Sequences</h2><ul>
 <li>Para 1 :<font color=#2196F3>过渡段，引出下一个例子。</font>XOR的例子太简单，只需要记忆一个时刻的1-bit，只有4种情况。更复杂的输入需要可能大于temporal extent，也可能pattern的长度可变。</li>
 <li>Para 2 :<font color=#2196F3>介绍第二个例子的输入。</font>用字母模拟speech sounds，用6-bit binary vector代表speech。6个bit分别是[Consonant, Vowel, Interrupted, High, Back, Voiced]。</li>
 <li>Para 3 :<font color=#2196F3>介绍输入sequence的步骤。</font>第一步，用(b,d,g)随机产生一个1,000-letter sequence，然后替换每个字母，由此生成一个semi-random的句子。</li>
