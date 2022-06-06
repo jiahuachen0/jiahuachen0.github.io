@@ -187,110 +187,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>所有实现以Pytorch实现为例，详情看<a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.functional.html?highlight=loss%20function">这里</a></p>
-<h1 id="1-Activation-Function"><a href="#1-Activation-Function" class="headerlink" title="1.Activation Function"></a>1.Activation Function</h1><ol>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.Threshold.html#torch.nn.Threshold">Threshold</a> </p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html#torch.nn.ReLU">ReLU</a> (Rectified Linear Unit)</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.ReLU6.html#torch.nn.ReLU6">ReLU6</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.leaky_relu.html#torch.nn.functional.leaky_relu">LeakyReLU</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.prelu.html#torch.nn.functional.prelu">PReLU</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.RReLU.html#torch.nn.RReLU">RReLU</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.elu.html#torch.nn.functional.elu">ELU</a> Exponential Linear Unit (ELU)</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.celu.html#torch.nn.functional.celu">CELU</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.selu.html#torch.nn.functional.selu">SELU</a>(Scaled Exponential Linear Unit)</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.glu.html#torch.nn.functional.glu">GLU</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.gelu.html#torch.nn.functional.gelu">GELU</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.logsigmoid.html#torch.nn.functional.logsigmoid">LogSigmoid</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.hardshrink.html#torch.nn.functional.hardshrink">HardShrink</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.tanhshrink.html#torch.nn.functional.tanhshrink">TanhShrink</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softsign.html#torch.nn.functional.softsign">SoftSign</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softplus.html#torch.nn.functional.softplus">SoftPlus</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softmin.html#torch.nn.functional.softmin">SoftMin</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softmax.html#torch.nn.functional.softmax">SoftMax</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softshrink.html#torch.nn.functional.softshrink">SoftShrink</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.gumbel_softmax.html#torch.nn.functional.gumbel_softmax">gumbel_softmax</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.tanh.html#torch.nn.functional.tanh">Tanh</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.sigmoid.html#torch.nn.functional.sigmoid">Sigmoid</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.hardsigmoid.html#torch.nn.functional.hardsigmoid">HardSigmoid</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.silu.html#torch.nn.functional.silu">SiLU</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.mish.html#torch.nn.functional.mish">Mish</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.batch_norm.html#torch.nn.functional.batch_norm">batch_norm</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.group_norm.html#torch.nn.functional.group_norm">group_norm</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.layer_norm.html#torch.nn.functional.layer_norm">layer_norm</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.instance_norm.html#torch.nn.functional.instance_norm">instance_norm</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.local_response_norm.html#torch.nn.functional.local_response_norm">local_response_norm</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.normalize.html#torch.nn.functional.normalize">normalize</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.Hardtanh.html#torch.nn.Hardtanh">HardTanh</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.hardswish.html#torch.nn.functional.hardswish">HardSwish</a></p>
-</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tototuzuoquan/article/details/113791252">图像</a><br><a target="_blank" rel="noopener" href="https://imgtu.com/i/X0kkVS"><img src="https://s1.ax1x.com/2022/06/06/X0kkVS.md.png" alt="X0kkVS.md.png"></a><br><a target="_blank" rel="noopener" href="https://imgtu.com/i/X0knvq"><img src="https://s1.ax1x.com/2022/06/06/X0knvq.md.png" alt="X0knvq.md.png"></a></p>
-<h1 id="2-Dropout-functions"><a href="#2-Dropout-functions" class="headerlink" title="2.Dropout functions"></a>2.Dropout functions</h1><p>在输入和网络权重之间加入Bernoulli函数生成的概率向量，来控制特征是否起作用。</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.dropout.html#torch.nn.functional.dropout">dropout</a></li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.dropout2d.html#torch.nn.functional.dropout2d">dropout2d</a></li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.dropout3d.html#torch.nn.functional.dropout3d">dropout3d</a> </li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.alpha_dropout.html#torch.nn.functional.alpha_dropout">alpha_dropout</a> maintains the self-normalizing property.</li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.feature_alpha_dropout.html#torch.nn.functional.feature_alpha_dropout">feature_alpha_dropout</a></li>
-</ol>
-<h1 id="3-Normalization"><a href="#3-Normalization" class="headerlink" title="3.Normalization"></a>3.Normalization</h1><p>统一数据规格。神经网络层数太深，internal covariate shift（ICS）使得每层输入不再是独立同分布<br>通过归一化的手段，将每层的输入强行拉回均值为0方差为1的标准正太分布，避免使用饱和activation function时，落入饱和区使得梯度消息，收敛速度下降的问题。</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.normalize.html#torch.nn.functional.normalize">narmalize</a></li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.batch_norm.html#torch.nn.functional.batch_norm">Batch Normalization</a></li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.layer_norm.html#torch.nn.functional.layer_norm">Layer Normalization</a></li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.group_norm.html#torch.nn.functional.group_norm">Group Normalization</a></li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.instance_norm.html#torch.nn.functional.instance_norm">Instance Normalization</a><br><img src="https://s3.bmp.ovh/imgs/2022/06/06/6d3938abafb0023b.png" alt="BN_LN"><br><img src="https://s3.bmp.ovh/imgs/2022/06/06/98afec4edaac657e.jpg"><br>GN介于LN和IN之间，其首先将channel分为许多组（group），对每一组做归一化，及先将feature的维度由[N, C, H, W]reshape为[N, G，C//G , H, W]，归一化的维度为[C//G , H, W].参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35005794">知乎</a>。</li>
-</ol>
-<h1 id="4-Optimizer"><a href="#4-Optimizer" class="headerlink" title="4.Optimizer"></a>4.Optimizer</h1><ol>
-<li>SGD</li>
-<li>ASGD</li>
-<li>Adadelta</li>
-<li>Adagrad</li>
-<li>Rprop</li>
-<li>RMSprop</li>
-<li>Adam</li>
-<li>AdamW</li>
-<li>Adamax</li>
-<li>NAdam</li>
-<li>RAdam</li>
-<li>SparseAdam</li>
-<li>L-BFGS<br><img src="https://s3.bmp.ovh/imgs/2022/06/06/f619fc33d80fea13.jpg"></li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/optim.html?highlight=optimizer#torch.optim.Optimizer">torch.optim</a></p>
-<h1 id="5-Loss-Function"><a href="#5-Loss-Function" class="headerlink" title="5.Loss Function"></a>5.Loss Function</h1><p><img src="https://s3.bmp.ovh/imgs/2022/06/07/9b6e9cad630d07a8.png"></p>
-<h1 id="6-Metrics"><a href="#6-Metrics" class="headerlink" title="6.Metrics"></a>6.Metrics</h1><p><img src="https://s3.bmp.ovh/imgs/2022/06/07/43921491a934c720.png"></p>
-
+        
+          <a class="article-more-a" href="/2022/06/06/ML-Note/#more">more >></a>
+        
       
 
       
@@ -1306,11 +1205,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Learn</a>
+                <a href="javascript:void(0)" class="js-tag color5">Life</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Life</a>
+                <a href="javascript:void(0)" class="js-tag color1">Learn</a>
               </li>
              
               <li class="article-tag-list-item">
