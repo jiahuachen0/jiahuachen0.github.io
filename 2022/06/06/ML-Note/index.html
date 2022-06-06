@@ -6,20 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Something Interesting | Hexo</title>
+  <title>ML Note | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This blog I want to collect some interesting things, just think this world is wonderful, long term update.  IIE LYH SSPKU YX DXL 309 WQYZ LL CYJ FCP SLZ FXWSS YRBridge WYQ FSTSS SMSS">
+  <meta name="description" content="所有实现以Pytorch实现为例，详情看这里 1.Activation Function Threshold   ReLU (Rectified Linear Unit)  ReLU6  LeakyReLU  PReLU  RReLU  ELU Exponential Linear Unit (ELU)  CELU  SELU(Scaled Exponential Linear Unit)  GL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Something Interesting">
-<meta property="og:url" content="http://example.com/2021/04/20/Something-Interesting/index.html">
+<meta property="og:title" content="ML Note">
+<meta property="og:url" content="http://example.com/2022/06/06/ML-Note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="This blog I want to collect some interesting things, just think this world is wonderful, long term update.  IIE LYH SSPKU YX DXL 309 WQYZ LL CYJ FCP SLZ FXWSS YRBridge WYQ FSTSS SMSS">
+<meta property="og:description" content="所有实现以Pytorch实现为例，详情看这里 1.Activation Function Threshold   ReLU (Rectified Linear Unit)  ReLU6  LeakyReLU  PReLU  RReLU  ELU Exponential Linear Unit (ELU)  CELU  SELU(Scaled Exponential Linear Unit)  GL">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-04-20T15:40:57.000Z">
-<meta property="article:modified_time" content="2021-04-21T12:52:18.375Z">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/06/X0kkVS.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/06/X0knvq.md.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/06/6d3938abafb0023b.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/06/98afec4edaac657e.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/06/f619fc33d80fea13.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/07/9b6e9cad630d07a8.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/07/43921491a934c720.png">
+<meta property="article:published_time" content="2022-06-06T00:54:34.000Z">
+<meta property="article:modified_time" content="2022-06-06T18:51:13.390Z">
 <meta property="article:author" content="Ella Collins">
-<meta property="article:tag" content="Life">
+<meta property="article:tag" content="Learn">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/06/06/X0kkVS.md.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -165,14 +173,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Something-Interesting" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ML-Note" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Something Interesting
+      ML Note
     </h1>
   
 
@@ -189,23 +197,118 @@
         
 
         
-        <a href="/2021/04/20/Something-Interesting/" class="archive-article-date">
-  	<time datetime="2021-04-20T15:40:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
+        <a href="/2022/06/06/ML-Note/" class="archive-article-date">
+  	<time datetime="2022-06-06T00:54:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This blog I want to collect some interesting things, just think this world is wonderful, long term update.</p>
-<ol>
-<li>IIE LYH SSPKU</li>
-<li>YX DXL 309 WQYZ</li>
-<li>LL CYJ</li>
-<li>FCP SLZ</li>
-<li>FXWSS YRBridge</li>
-<li>WYQ FSTSS SMSS </li>
+        <p>所有实现以Pytorch实现为例，详情看<a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.functional.html?highlight=loss%20function">这里</a></p>
+<h1 id="1-Activation-Function"><a href="#1-Activation-Function" class="headerlink" title="1.Activation Function"></a>1.Activation Function</h1><ol>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.Threshold.html#torch.nn.Threshold">Threshold</a> </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html#torch.nn.ReLU">ReLU</a> (Rectified Linear Unit)</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.ReLU6.html#torch.nn.ReLU6">ReLU6</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.leaky_relu.html#torch.nn.functional.leaky_relu">LeakyReLU</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.prelu.html#torch.nn.functional.prelu">PReLU</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.RReLU.html#torch.nn.RReLU">RReLU</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.elu.html#torch.nn.functional.elu">ELU</a> Exponential Linear Unit (ELU)</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.celu.html#torch.nn.functional.celu">CELU</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.selu.html#torch.nn.functional.selu">SELU</a>(Scaled Exponential Linear Unit)</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.glu.html#torch.nn.functional.glu">GLU</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.gelu.html#torch.nn.functional.gelu">GELU</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.logsigmoid.html#torch.nn.functional.logsigmoid">LogSigmoid</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.hardshrink.html#torch.nn.functional.hardshrink">HardShrink</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.tanhshrink.html#torch.nn.functional.tanhshrink">TanhShrink</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softsign.html#torch.nn.functional.softsign">SoftSign</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softplus.html#torch.nn.functional.softplus">SoftPlus</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softmin.html#torch.nn.functional.softmin">SoftMin</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softmax.html#torch.nn.functional.softmax">SoftMax</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.softshrink.html#torch.nn.functional.softshrink">SoftShrink</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.gumbel_softmax.html#torch.nn.functional.gumbel_softmax">gumbel_softmax</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.tanh.html#torch.nn.functional.tanh">Tanh</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.sigmoid.html#torch.nn.functional.sigmoid">Sigmoid</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.hardsigmoid.html#torch.nn.functional.hardsigmoid">HardSigmoid</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.silu.html#torch.nn.functional.silu">SiLU</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.mish.html#torch.nn.functional.mish">Mish</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.batch_norm.html#torch.nn.functional.batch_norm">batch_norm</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.group_norm.html#torch.nn.functional.group_norm">group_norm</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.layer_norm.html#torch.nn.functional.layer_norm">layer_norm</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.instance_norm.html#torch.nn.functional.instance_norm">instance_norm</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.local_response_norm.html#torch.nn.functional.local_response_norm">local_response_norm</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.normalize.html#torch.nn.functional.normalize">normalize</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.Hardtanh.html#torch.nn.Hardtanh">HardTanh</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.hardswish.html#torch.nn.functional.hardswish">HardSwish</a></p>
+</li>
 </ol>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tototuzuoquan/article/details/113791252">图像</a><br><a target="_blank" rel="noopener" href="https://imgtu.com/i/X0kkVS"><img src="https://s1.ax1x.com/2022/06/06/X0kkVS.md.png" alt="X0kkVS.md.png"></a><br><a target="_blank" rel="noopener" href="https://imgtu.com/i/X0knvq"><img src="https://s1.ax1x.com/2022/06/06/X0knvq.md.png" alt="X0knvq.md.png"></a></p>
+<h1 id="2-Dropout-functions"><a href="#2-Dropout-functions" class="headerlink" title="2.Dropout functions"></a>2.Dropout functions</h1><p>在输入和网络权重之间加入Bernoulli函数生成的概率向量，来控制特征是否起作用。</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.dropout.html#torch.nn.functional.dropout">dropout</a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.dropout2d.html#torch.nn.functional.dropout2d">dropout2d</a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.dropout3d.html#torch.nn.functional.dropout3d">dropout3d</a> </li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.alpha_dropout.html#torch.nn.functional.alpha_dropout">alpha_dropout</a> maintains the self-normalizing property.</li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.feature_alpha_dropout.html#torch.nn.functional.feature_alpha_dropout">feature_alpha_dropout</a></li>
+</ol>
+<h1 id="3-Normalization"><a href="#3-Normalization" class="headerlink" title="3.Normalization"></a>3.Normalization</h1><p>统一数据规格。神经网络层数太深，internal covariate shift（ICS）使得每层输入不再是独立同分布<br>通过归一化的手段，将每层的输入强行拉回均值为0方差为1的标准正太分布，避免使用饱和activation function时，落入饱和区使得梯度消息，收敛速度下降的问题。</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.normalize.html#torch.nn.functional.normalize">narmalize</a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.batch_norm.html#torch.nn.functional.batch_norm">Batch Normalization</a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.layer_norm.html#torch.nn.functional.layer_norm">Layer Normalization</a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.group_norm.html#torch.nn.functional.group_norm">Group Normalization</a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.instance_norm.html#torch.nn.functional.instance_norm">Instance Normalization</a><br><img src="https://s3.bmp.ovh/imgs/2022/06/06/6d3938abafb0023b.png" alt="BN_LN"><br><img src="https://s3.bmp.ovh/imgs/2022/06/06/98afec4edaac657e.jpg"><br>GN介于LN和IN之间，其首先将channel分为许多组（group），对每一组做归一化，及先将feature的维度由[N, C, H, W]reshape为[N, G，C//G , H, W]，归一化的维度为[C//G , H, W].参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35005794">知乎</a>。</li>
+</ol>
+<h1 id="4-Optimizer"><a href="#4-Optimizer" class="headerlink" title="4.Optimizer"></a>4.Optimizer</h1><ol>
+<li>SGD</li>
+<li>ASGD</li>
+<li>Adadelta</li>
+<li>Adagrad</li>
+<li>Rprop</li>
+<li>RMSprop</li>
+<li>Adam</li>
+<li>AdamW</li>
+<li>Adamax</li>
+<li>NAdam</li>
+<li>RAdam</li>
+<li>SparseAdam</li>
+<li>L-BFGS<br><img src="https://s3.bmp.ovh/imgs/2022/06/06/f619fc33d80fea13.jpg"></li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/optim.html?highlight=optimizer#torch.optim.Optimizer">torch.optim</a></p>
+<h1 id="5-Loss-Function"><a href="#5-Loss-Function" class="headerlink" title="5.Loss Function"></a>5.Loss Function</h1><p><img src="https://s3.bmp.ovh/imgs/2022/06/07/9b6e9cad630d07a8.png"></p>
+<h1 id="6-Metrics"><a href="#6-Metrics" class="headerlink" title="6.Metrics"></a>6.Metrics</h1><p><img src="https://s3.bmp.ovh/imgs/2022/06/07/43921491a934c720.png"></p>
 
       
 
@@ -219,7 +322,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Life</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Learn</a>
         		</li>
       		
 		</ul>
@@ -275,7 +378,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/20/Something-Interesting/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/06/06/ML-Note/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -289,18 +392,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/08/08/%E5%8A%9B%E8%A1%8C%E6%9A%91%E6%9C%9F%E5%AE%9E%E8%B7%B5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          江南水乡，稻香小镇
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/04/02/My-First-Blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">My First Blog</div>
+    <a href="/2022/05/29/%E6%89%80%E4%BB%A5%E4%BD%A0%E6%83%B3%E5%BD%93%E8%B0%81%E5%91%A2%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">所以你想当谁呢？</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -327,7 +421,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Activation-Function"><span class="toc-number">1.</span> <span class="toc-text">1.Activation Function</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Dropout-functions"><span class="toc-number">2.</span> <span class="toc-text">2.Dropout functions</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Normalization"><span class="toc-number">3.</span> <span class="toc-text">3.Normalization</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Optimizer"><span class="toc-number">4.</span> <span class="toc-text">4.Optimizer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Loss-Function"><span class="toc-number">5.</span> <span class="toc-text">5.Loss Function</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Metrics"><span class="toc-number">6.</span> <span class="toc-text">6.Metrics</span></a></li></ol>
                     </div>
                 </span>
             </div>
