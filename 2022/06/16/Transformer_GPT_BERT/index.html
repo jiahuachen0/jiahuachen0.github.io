@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Paper-reading | 《Long Short-Term Memory》 | Hexo</title>
+  <title>Transformer及基于它的工作 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文章名：《Long Short-Term Memory》 发表信息：1997年，Neural Computation, MIT Press 作者：德国计算机科学家Sepp Hochreiter Wikepedia&amp;&amp;scholar.google, 瑞士计算机科学家Jurgen Schmidhuber, Wikipedia &amp;&amp; scholar.google 论文内容">
+  <meta name="description" content="总结一下下Transformer以及基于它的工作。2017年3位Google Brain &amp; 3位Google Research etal 8位大神的共一论文《Attention Is All You Need》提出的Transformer结束了RNN那个时代，开启了NLP领域的新纪元，如果很多的模型都是对基于Transformer产生的BERT模型的微调。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Paper-reading | 《Long Short-Term Memory》">
-<meta property="og:url" content="http://example.com/2022/05/01/Paper-reading-%E3%80%8ALong-Short-Term-Memory%E3%80%8B/index.html">
+<meta property="og:title" content="Transformer及基于它的工作">
+<meta property="og:url" content="http://example.com/2022/06/16/Transformer_GPT_BERT/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="文章名：《Long Short-Term Memory》 发表信息：1997年，Neural Computation, MIT Press 作者：德国计算机科学家Sepp Hochreiter Wikepedia&amp;&amp;scholar.google, 瑞士计算机科学家Jurgen Schmidhuber, Wikipedia &amp;&amp; scholar.google 论文内容">
+<meta property="og:description" content="总结一下下Transformer以及基于它的工作。2017年3位Google Brain &amp; 3位Google Research etal 8位大神的共一论文《Attention Is All You Need》提出的Transformer结束了RNN那个时代，开启了NLP领域的新纪元，如果很多的模型都是对基于Transformer产生的BERT模型的微调。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-01T07:42:58.000Z">
-<meta property="article:modified_time" content="2022-05-07T11:38:23.070Z">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/17/b5f19f5b9f3e3c04.jpg">
+<meta property="article:published_time" content="2022-06-16T15:03:17.000Z">
+<meta property="article:modified_time" content="2022-07-11T03:00:11.100Z">
 <meta property="article:author" content="Ella Collins">
 <meta property="article:tag" content="Learn">
-<meta property="article:tag" content="Paper">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/06/17/b5f19f5b9f3e3c04.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -166,14 +167,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Paper-reading-《Long-Short-Term-Memory》" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Transformer_GPT_BERT" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Paper-reading | 《Long Short-Term Memory》
+      Transformer及基于它的工作
     </h1>
   
 
@@ -190,85 +191,19 @@
         
 
         
-        <a href="/2022/05/01/Paper-reading-%E3%80%8ALong-Short-Term-Memory%E3%80%8B/" class="archive-article-date">
-  	<time datetime="2022-05-01T07:42:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-01</time>
+        <a href="/2022/06/16/Transformer_GPT_BERT/" class="archive-article-date">
+  	<time datetime="2022-06-16T15:03:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>文章名：<a target="_blank" rel="noopener" href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.676.4320&rep=rep1&type=pdf">《Long Short-Term Memory》</a></p>
-<p>发表信息：1997年，Neural Computation, MIT Press</p>
-<p>作者：德国计算机科学家Sepp Hochreiter <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Sepp_Hochreiter">Wikepedia</a>&amp;&amp;<a target="_blank" rel="noopener" href="https://scholar.google.com/citations?hl=zh-CN&user=tvUH3WMAAAAJ">scholar.google</a>, 瑞士计算机科学家Jurgen Schmidhuber, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/J%C3%BCrgen_Schmidhuber">Wikipedia</a> &amp;&amp; <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?hl=zh-CN&user=gLnCTgIAAAAJ">scholar.google</a></p>
-<h1 id="论文内容"><a href="#论文内容" class="headerlink" title="论文内容"></a>论文内容</h1><center>  &laquo Long Short-Term Memory &raquo </center> 
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Introduction</span><br><span class="line">Previous Work</span><br><span class="line">Constant Error Backprop</span><br><span class="line">Long Short-Term Memory</span><br><span class="line">Experiments</span><br><span class="line">Discussion</span><br><span class="line">Conclusions</span><br></pre></td></tr></table></figure>
+        <p>总结一下下Transformer以及基于它的工作。2017年3位Google Brain &amp; 3位Google Research <em>etal</em> 8位大神的共一论文《Attention Is All You Need》提出的Transformer结束了RNN那个时代，开启了NLP领域的新纪元，如果很多的模型都是对基于Transformer产生的BERT模型的微调。</p>
 <span id="more"></span>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
-<li>Gate:和隐藏状态长度一样的向量</li>
-<li>LSTM有3个gate，GRU有2个gate</li>
-<li>CEC: constant error carrousel </li>
-<li>LSTM中的$\widetilde{C}$ (candidate memory)和RNN中$h_{t}$计算方法一样，没有用到gate, $C_{t}=F_{t}\odot C_{t-1}+I_{t}\odot\widetilde{C}<em>{t}$, $C</em>{t}$的数值区间可能比较大</li>
-<li>$ H_{t} = O_{t} \odot tanh(C_{t}) $</li>
-</ul>
-<h2 id="0-Abstract"><a href="#0-Abstract" class="headerlink" title="0.Abstract"></a>0.Abstract</h2><p>通过recurrent backpropagation学习存储长时间的信息由于insufficient, decaying error back flow.因此提出了LSTM。在local，distributed，real-valued，noisy的数据上和RTRL，BPTT，Recurrent Cascade-Correlation，Elman nets，Neural Sequence Chunking方法的结果进行了对比，LSTM结果更成功，更快。LSTM解决的long time lag tasks。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1.Introduction"></a>1.Introduction</h2><p><strong>P1：引言。</strong> Recurrent network只是short-term memory。最常见的学习what to put in short-term memory的方法尽管再理论上很吸引人，但是在实践中没有提供很好的结果。</p>
-<p><strong>P2：The problem.</strong> Back-Propagation Through Time(BPTT)和Real-Time Recurrent Learning(RTRL)的方法会在反向传播的时候产生blow up和vanish的问题。</p>
-<p><strong>P3：The remedy.</strong> 文章设计了LSTM来解决 error back-flow的问题。在不损失短时学习能力、不压缩输入、带有噪音的情况下，可以学习超过1000 step。在指定的结构点截断梯度。</p>
-<p><strong>P4：Outline of paper.</strong> Section 2是previous work.Section 3是analysis of vanishing errors due to Hochreiter. Section 4 是介绍LSTM. Section 5是experiments. Section 6是LSTM’s limitations和advantages. 附录详细介绍了算法和error flow。</p>
-<h2 id="2-Previous-Work"><a href="#2-Previous-Work" class="headerlink" title="2.Previous Work"></a>2.Previous Work</h2><p><strong>P1：总体介绍</strong>介绍这章关注recurrent nets with time-varying inputs.介绍现有的解决long-term lags的方法和不足。</p>
-<p><strong>P2：Gradient-descent variants.</strong> 许多梯度下降变体的方法有BPTT和RTRL一样的问题。</p>
-<p>**P3：Time-delays.**Time-Delay Neural Networks和Plate’s method的用old activations的加权和更新activation的方法只适用于short time lags。</p>
-<p><strong>P4：Time constants.</strong> Mozer的使用time constants影响unit activations的方法需要微调。Sun et al.’s的方法干扰了存储信息，使得long-term storage不可行。</p>
-<p><strong>P5：Ring’s approach.</strong> Ring的方法尽管可以达到100 steps, 但是不能泛化到unseen lag durations.</p>
-<p><strong>P6：Bengio et al.’s approaches.</strong> 对于解决continuous problems（such as the “adding problem”),系统要求有unacceptable number of states。</p>
-<p><strong>P7：Kalman filters.</strong> Kalman filter是一个强加于过去状态的指数衰减因子。但是，没有理由相信它对long minimal time lags有用。</p>
-<p><strong>P8：Second order nets.</strong> 1992年Watrous和Kuhn的second order nets使用了multiplicative units(MUs)。但是和LSTM中使用的有一些不同。</p>
-<p><strong>P9：Simple weight guessing.</strong> 在现实的问题中，需要更free parameters，simple weight guessing的方法不可行。</p>
-<p><strong>P10：Adaptive sequence chunkers.</strong> chunkers的方法会随着noise level和input sequences become less compressible性能下降。</p>
-<h2 id="3-Constant-Error-Backprop"><a href="#3-Constant-Error-Backprop" class="headerlink" title="3.Constant Error Backprop"></a>3.Constant Error Backprop</h2><p>介绍Exponentially Decaying Error和Constant Error Flow。分析误差消失的原因。数学公式居多，略过。</p>
-<h2 id="4-Long-Short-Term-Memory"><a href="#4-Long-Short-Term-Memory" class="headerlink" title="4.Long Short-Term Memory"></a>4.Long Short-Term Memory</h2><p><strong>P1：Memory cells and gate units.</strong> 在self-connected units中加入constant error carrousel(CEC)。<em>multiplicative input gate unit</em>阻止memory content被不相关的输入干扰；<em>multiplicative output gate unit</em>阻止不相关的memory content影响其他unit.</p>
-<p><strong>P2：公式介绍memory cell.</strong> $ I_{t}$、$ O_{t}$、$ \widetilde{C}_{t}$的计算方法。</p>
-<p><strong>P3：公式介绍更新状态.</strong> 用$ \widetilde{C}<em>{t} \rightarrow C</em>{t} \rightarrow  H_{t}.$ </p>
-<p><strong>P4：两个gate unit的作用.</strong>  $I_{t}$控制error flow到memory cell     $\widetilde{C}<em>{t}$的输入连接权重，$O</em>{t}$控制error flow的输出连接。</p>
-<p>**P5：再次强调input/output gate的作用.**memory cell的CEC中的error signal不能变化，但是不同时刻通过output gate流出的信号可以叠加。input/output gate通过合适的scaling操作来控制信号。</p>
-<p>**P6：解释output gate的重要作用.**不是所有的情况都需要input和output gate。分布式输出的场景是典型的需要用到output gate的场景。在local output encoding中output gate是不需要的，但是使用output gate是有好处的。</p>
-<p><strong>P7：Network topology.</strong> 1 input layer, 1 hidden layer, 1 output layer.</p>
-<p>**P8：Memory cell blocks.**Memory cell block of size $S$更利于信息的存储。一个block中的所有memory cell共享input/output gate.</p>
-<p><strong>P9：Learning.</strong> 使用RTRL和BPTT方法作为LSTM方法的对比。</p>
-<p><strong>P10：Computational complexity.</strong> 与权重的尺寸有关。</p>
-<p><strong>P11：Abuse problem and solutions.</strong> 在学习开始阶段或者两个memory cell存储了相同信息的时候会引起memory/bias cell的滥用。两个解决方法：（1）<em>sequential network construction</em>:当网络的error停止下降的时候，a memory cell和对应的gate units被加在网络上；（2）<em>output gate bias</em>:把output gate bias设置为负值。</p>
-<p><strong>P12：Internal state drift and remedies.</strong> 当memory cell的状态多数为正值或者多数为负值的时候，内部状态可能会漂移，选择合适的激活函数来解决。</p>
-<h2 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5.Experiments"></a>5.Experiments</h2><p>介绍实验设计。</p>
-<p><strong>Exp1：Embedded Reber grammar.</strong> 这是一个short time lags问题。包含该实验的两个原因：（1）证明LSTM的output gate是很有用的；（2）recurrent nets中的一个经典实验，尽管现有的方法可以解决。</p>
-<p><strong>Exp2：Noise-free and noisy sequences.</strong>  最小的time lags是1000 steps.RTRL和BPTT没有解决，LSTM解决了。预测sequences的下一个输入。</p>
-<p><strong>Exp3：Noise and Signal on Same Channel.</strong> noise 和signal在相同的输入中。Bengio et al.的2-sequence problem。带有noise的sequences分类问题。</p>
-<p><strong>Exp4：Adding Problem.</strong> 输入是sequence of a pair of components,第一个元素是[-1,1]之间的随机数，第二个元素是1.0/0.0/-1.0; 输出所有第二个元素为1.0的pair的第一个元素之和。 </p>
-<p><strong>Exp5：Multiplication Problem.</strong> Exp4的改进问题，在sequence的产生上有不同。</p>
-<p><strong>Exp6：Temporal Order.</strong> 不同复杂度问题的结合。句子类别分类问题。   </p>
-<h2 id="6-Discussion"><a href="#6-Discussion" class="headerlink" title="6.Discussion"></a>6.Discussion</h2><p><strong>Limitations.</strong></p>
-<ul>
-<li>The truncated backprop version of the LSTM不能解决“strongly delayed XOR problems”.</li>
-<li>每一个memory cell block需要两个额外的单元（input and output gate）.这样会使参数最多增加$3^{2}$倍。</li>
-<li>由于CECs结构，LSTM在某些问题上的表现可能与一次看见所有输入的前馈网络一样。</li>
-<li>LSTM没有“recency”的概念。 </li>
-</ul>
-<p><strong>Advantages.</strong></p>
-<ul>
-<li>memory cells的constant error backpropagation可以连接long time lags.</li>
-<li>LSTM可以处理noise、distributed representations、continuous values.</li>
-<li>LSTM泛化能力好，即使相关输入的位置很分散。</li>
-<li>不需要微调参数，在多种参数上性能表现都很好。例如，learning rate、input gate bias、output gate bias。</li>
-<li>在更新复杂度上，LSTM的消耗都是常数级别的。</li>
-</ul>
-<h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7.Conclusion"></a>7.Conclusion</h2><p> <strong>总结LSTM各个模块的功能。</strong> memory cell 利用它的CEC（constant error carrousel）提供截断backprop来释放memory cell的功能。Two gate 学习用来open/close。multiplicative input gate避免CEC收到不相关输入的干扰。multiplicative output gate避免其他unit受到不相关memory contents的干扰。</p>
-<p> <strong>Future Work</strong>发现LSTM应用在真实数据上的限制。（1）time series prediction,(2)music composition,(3)speech processing。以及，sequence chunker和LSTM结合。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p> 截至2022-05-05LSTM论文引用量是64895。Elman RNN 是1990年提出，LSTM的一作Hochreiter在1991年分析了RNN的不足之处，作者在Acknowledgments中感谢anonymous referees对1995年版文章的评论和意见，LSTM正式发表是在1997年。可见，要产生一篇好的、有大用的文章，需要很长时间的研究。首先要非常清楚相，关领域的发展以及现有工作的不足之处；然后提出改进、验证、再改进；最后根据专家的意见反复打磨。需要花费很长时间，从时间上来看，不谈LSTM作者之前对相关领域的研究了解上花费的时间，仅在LSTM上作者至少花了7年时间才产生出了这样一篇文章。</p>
-<h1 id="理解LSTM"><a href="#理解LSTM" class="headerlink" title="理解LSTM"></a>理解LSTM</h1><p> 看OpenAI、Google Brain大神Christopher Olah对LSTM的<a target="_blank" rel="noopener" href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">理解</a>。</p>
-<p> PyTorch 1.11.0版本的<a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html?highlight=lstm#torch.nn.LSTM">LSTM</a>。</p>
-<p> 更多细节看GRU的阅读笔记。</p>
 
+<h1 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h1><p><img src="https://s3.bmp.ovh/imgs/2022/06/17/b5f19f5b9f3e3c04.jpg"></p>
+<h1 id="GPT-Generative-Pre-trained-Transformer"><a href="#GPT-Generative-Pre-trained-Transformer" class="headerlink" title="GPT(Generative Pre-trained Transformer)"></a>GPT(Generative Pre-trained Transformer)</h1><h1 id="BERT-Bidirectional-Encoder-Representations-from-Transformers"><a href="#BERT-Bidirectional-Encoder-Representations-from-Transformers" class="headerlink" title="BERT(Bidirectional Encoder Representations from Transformers.)"></a>BERT(Bidirectional Encoder Representations from Transformers.)</h1>
       
 
       
@@ -282,10 +217,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Learn</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Paper</a>
         		</li>
       		
 		</ul>
@@ -341,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/01/Paper-reading-%E3%80%8ALong-Short-Term-Memory%E3%80%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/06/16/Transformer_GPT_BERT/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -355,18 +286,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/05/07/Paper-reading-%E3%80%8ALearning-Phrase-Representations-using-RNN-Encoder%E2%80%93Decoder%E3%80%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/07/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E4%BF%A1%E4%B8%8E%E7%BD%91%E7%BB%9C/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Paper-reading | 《Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation》
+          计算机通信与网络
         
       </div>
     </a>
   
   
-    <a href="/2022/04/30/%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">面试记录</div>
+    <a href="/2022/06/14/Papers-Note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Papers Note</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -393,7 +324,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E5%86%85%E5%AE%B9"><span class="toc-number">1.</span> <span class="toc-text">论文内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tips"><span class="toc-number">1.1.</span> <span class="toc-text">Tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0-Abstract"><span class="toc-number">1.2.</span> <span class="toc-text">0.Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-number">1.3.</span> <span class="toc-text">1.Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Previous-Work"><span class="toc-number">1.4.</span> <span class="toc-text">2.Previous Work</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Constant-Error-Backprop"><span class="toc-number">1.5.</span> <span class="toc-text">3.Constant Error Backprop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Long-Short-Term-Memory"><span class="toc-number">1.6.</span> <span class="toc-text">4.Long Short-Term Memory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Experiments"><span class="toc-number">1.7.</span> <span class="toc-text">5.Experiments</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Discussion"><span class="toc-number">1.8.</span> <span class="toc-text">6.Discussion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Conclusion"><span class="toc-number">1.9.</span> <span class="toc-text">7.Conclusion</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%90%86%E8%A7%A3LSTM"><span class="toc-number">3.</span> <span class="toc-text">理解LSTM</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Transformer"><span class="toc-number">1.</span> <span class="toc-text">Transformer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GPT-Generative-Pre-trained-Transformer"><span class="toc-number">2.</span> <span class="toc-text">GPT(Generative Pre-trained Transformer)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BERT-Bidirectional-Encoder-Representations-from-Transformers"><span class="toc-number">3.</span> <span class="toc-text">BERT(Bidirectional Encoder Representations from Transformers.)</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -516,11 +447,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Learn</a>
+                <a href="javascript:void(0)" class="js-tag color5">Life</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Life</a>
+                <a href="javascript:void(0)" class="js-tag color1">Learn</a>
               </li>
              
               <li class="article-tag-list-item">
